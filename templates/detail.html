@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div style="
+    display:grid;
+    grid-template-columns:auto auto auto;">
+            <div style="
+            display:flex;
+            flex-direction:row;
+            flex:1fr 200px;
+            justify-content:center;
+            align-items:center">
+                <img src="{{movie.img.url}}" alt="" width="150" height="200" style="margin:30px 30px"><br>
+                {{movie.name}}
+                {{movie.desc}}
+                {{movie.year}}
+                <a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}" style="margin:30px 30px">Update</a>
+                <a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}" style="margin:30px 30px">Delete</a>
+            </div>
+    </div>
+
+{% endblock %}
