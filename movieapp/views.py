@@ -27,6 +27,7 @@ def add_movie(request):
         movie = Movie(name=name, desc=desc, year=year, img=img)
         movie.save()
         print("New movie", name, "added")
+        return redirect('/')
     return render(request, "add.html")
 
 
@@ -45,3 +46,6 @@ def delete(request, id):
         movie.delete()
         return redirect('/')
     return render(request, "delete.html")
+
+
+

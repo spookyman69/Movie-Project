@@ -10,10 +10,12 @@
 <body>
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       Online Movie Store
     </a>
+      <a href="{% url 'movieapp:add_movie' %}" class="btn btn-success">Add Movie</a>
   </div>
+
 </nav>
 {% block body %}
 {% endblock %}
